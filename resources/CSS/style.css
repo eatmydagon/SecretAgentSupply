@@ -11,6 +11,14 @@ a {
 a:hover{
   opacity: 0.5;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+main {
+  flex-grow: 1;
+}
 /*Header*/
 
 .top-header {
@@ -73,6 +81,22 @@ a:hover{
   padding-bottom: 0.75rem;
 }
 
+.tablet {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px){
+.desktop {
+display: none;}
+.tablet {
+  display: inherit;
+}
+.bottom-header nav {
+  justify-content: center;
+}
+}
+
+
 /* Main Page*/
 .top-main-content {
   display: flex;
@@ -104,6 +128,7 @@ a:hover{
   width: 960px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 3rem;
   margin-bottom: 4rem;
   justify-content: space-between;
@@ -121,6 +146,7 @@ a:hover{
   color: black;
   padding-top: 0.5rem;
 }
+
 
 /*Footer*/
 .footer-main {
